@@ -30,7 +30,7 @@ namespace RazorPagesMovie.Models
                             RealeaseDate = DateTime.Parse("1989-2-12"),
                             Genre = "Romantic Comedy",
                             Price = 7.99M,
-                            Rating = "S"
+                            Rating = "M"
                         },
 
                         new Movie
