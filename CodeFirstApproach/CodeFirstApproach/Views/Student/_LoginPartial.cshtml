@@ -1,0 +1,15 @@
+﻿
+@using System.Globalization;
+@using System.Threading;
+<ul class="nav  navbar-nav">
+    @{
+        CultureInfo currentculture = Thread.CurrentThread.CurrentCulture;
+        <li><a href="/Person/ChangeCurrentCulture/0">English=</a></li>
+        <li><a href="/Person/ChangeCurrentCulture/1">Hindi</a></li>
+        <li><a href="/Person/ChangeCurrentCulture/2">Marathi</a></li>
+        <li><a href="/Person/ChangeCurrentCulture/3">Arabic</a></li>
+        <li><a href="/Person/ChangeCurrentCulture/4">French</a></li>
+    }
+
+
+</ul>

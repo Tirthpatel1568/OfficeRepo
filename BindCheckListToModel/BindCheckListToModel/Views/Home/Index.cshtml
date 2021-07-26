@@ -1,0 +1,46 @@
+﻿@model BindCheckListToModel.Models.CountryModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bind CheckBoxList in MVC</h2>
+@using (Html.BeginForm("Index", "Home"))
+            {
+<table width="100%">
+    @for (int i = 0; i < Model.CountryList.Count; i++)
+    {
+        <tr>
+            <td>
+                @Html.CheckBoxFor(m => m.CountryList[i].CheckedStatus)
+                @Model.CountryList[i].CountryName
+                @Html.HiddenFor(m=>m.CountryList[i].CountryName)
+                    @Html.HiddenFor(m=>m.CountryList[i].countryId)
+
+            </td>
+        </tr>
+    }
+    <tr>
+        <td class="form-group">
+            
+                @Html.LabelFor(m => m.isHome, "isHome");
+                @Html.CheckBoxFor(m => m.isHome);
+          
+           
+        </td>
+    </tr>
+
+ 
+    <tr>
+        <td>
+            <input type="submit" value="Submit" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @ViewBag.Country
+            is it your Home Country?:@ViewBag.isHomeChecked
+        </td>
+    </tr>
+</table>
+            }
+
